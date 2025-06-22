@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 350px;
+        }
+
+        input[type=number], input[type=text] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="/predict" method="post">
+        <h2>Diabetes Prediction Form</h2>
+        <input type="number" name="pregnancies" placeholder="Pregnancies" min="0" required>
+        <input type="number" name="glucose" placeholder="Glucose" min="1" required>
+        <input type="number" name="bp" placeholder="Blood Pressure" min="1" required>
+        <input type="number" name="skin" placeholder="Skin Thickness" min="1" required>
+        <input type="number" name="insulin" placeholder="Insulin" min="1" required>
+        <input type="text" name="bmi" placeholder="BMI (e.g. 23.5)" pattern="^\d+(\.\d+)?$" required>
+        <input type="text" name="dpf" placeholder="Diabetes Pedigree Function (e.g. 0.35)" pattern="^\d+(\.\d+)?$" required>
+        <input type="number" name="age" placeholder="Age" min="1" required>
+        <input type="submit" value="Predict">
+    </form>
+
+</body>
+</html>

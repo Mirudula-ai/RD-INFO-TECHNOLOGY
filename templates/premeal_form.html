@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
     <title>Pre-Meal Form</title>
     <link rel="stylesheet" href="/static/css/style.css">
 </head>
@@ -21,3 +22,57 @@
 </div>
 </body>
 </html>
+=======
+    <title>Pre-Meal Diabetes Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+        input[type=number], input[type=text] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <h2>Pre-Meal Form</h2>
+        <input type="hidden" name="meal_type" value="pre-meal">
+        <input type="number" name="pregnancies" placeholder="Pregnancies (0–20)" min="0" max="20" required>
+        <input type="number" name="glucose" placeholder="Glucose mg/dL (70–99)" min="70" max="99" required>
+        <input type="number" name="bp" placeholder="Blood Pressure (80–200)" min="80" max="200" required>
+        <input type="number" name="skin" placeholder="Skin Thickness (5–100)" min="5" max="100" required>
+        <input type="number" name="insulin" placeholder="Insulin (15–300)" min="15" max="300" required>
+        <input type="text" name="bmi" placeholder="BMI (10.0–60.0)" pattern="^\d+(\.\d+)?$" required>
+        <input type="text" name="dpf" placeholder="DPF (0.0–3.0)" pattern="^([0-2](\.\d+)?|3(\.0+)?)$" required>
+        <input type="number" name="age" placeholder="Age (1–120)" min="1" max="120" required>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
+>>>>>>> c5edf7ec071f4b8303d7e1e094805c44a440ef82

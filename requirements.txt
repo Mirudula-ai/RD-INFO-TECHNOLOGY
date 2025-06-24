@@ -1,10 +1,5 @@
-flask
-<<<<<<< HEAD
-numpy
-scikit-learn
-joblib
-=======
-joblib
-numpy
-scikit-learn
->>>>>>> c5edf7ec071f4b8303d7e1e094805c44a440ef82
+flask==3.1.1
+numpy==2.3.1
+scikit-learn==1.7.0
+joblib==1.5.1
+

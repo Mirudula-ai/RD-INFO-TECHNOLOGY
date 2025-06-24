@@ -1,1 +1,23 @@
-Merge remote-tracking branch'origin/main'
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post-Meal Form</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Post-Meal Diabetes Check</h2>
+    <form action="/predict" method="post">
+      <input type="number" name="pregnancies" min="0" placeholder="Pregnancies" required>
+      <input type="number" name="glucose" min="100" max="180" placeholder="Glucose (100–180)" required>
+      <input type="number" name="bp" min="40" max="120" placeholder="Blood Pressure (40–120)" required>
+      <input type="number" name="skin" min="7" max="50" placeholder="Skin Thickness (7–50)" required>
+      <input type="number" name="insulin" min="10" max="200" placeholder="Insulin (10–200)" required>
+      <input type="number" name="bmi" step="0.1" min="10" max="60" placeholder="BMI (10–60)" required>
+      <input type="number" name="dpf" step="0.01" min="0.0" max="2.5" placeholder="DPF (0.0–2.5)" required>
+      <input type="number" name="age" min="1" max="120" placeholder="Age (1–120)" required>
+      <button type="submit">Predict</button>
+    </form>
+  </div>
+</body>
+</html>

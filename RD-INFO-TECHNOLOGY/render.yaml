@@ -1,10 +1,6 @@
 services:
   - type: web
-<<<<<<< HEAD
-    name: diabetes-predictor-meal
-=======
     name: diabetes-predictor
->>>>>>> e3f99357a60b8229cd3166b4c3a70118ab3fd085
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python app.py
